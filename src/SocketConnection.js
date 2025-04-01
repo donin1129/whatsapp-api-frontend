@@ -26,6 +26,7 @@ function SocketConnection(apiKey) {
     } else {
       socketUrl = process.env.REACT_APP_BACKEND_URL
     }
+    console.info(`Connecting to socket url at '${socketUrl}' connected`);
     const socket = io( socketUrl, opt)
     socket.on('socketEvent', (data) => {
       setWebSocketData(data);

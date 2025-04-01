@@ -4,6 +4,7 @@ if (process.env.REACT_APP_BACKEND_RESTAPI_PORT) {
 } else {
   API_BASE_URL = process.env.REACT_APP_BACKEND_URL
 }
+console.info(`Rest api url at '${API_BASE_URL}'`);
 
 export function getHeaders(apiKey) {
   if (apiKey === '') {
